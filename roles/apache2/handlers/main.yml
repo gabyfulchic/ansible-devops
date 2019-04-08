@@ -2,6 +2,7 @@
   service:
     name: apache2
     state: restarted
+    enabled: true
 
 - name: configure apache2
 

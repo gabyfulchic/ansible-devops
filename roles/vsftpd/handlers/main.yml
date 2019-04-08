@@ -1,0 +1,7 @@
+- name: enable vsftpd
+  service:
+    name: vsftpd
+    state: restarted
+    enable: true
+
+- name: configure vsftpd

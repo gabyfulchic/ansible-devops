@@ -1,0 +1,9 @@
+---
+
+- name: Lancement du playbook déployant vsftpd/mysqld/apache2/php
+  tasks:
+    include_role:
+      name: {{ item.name }}
+    with_items:
+      - "{{ roles }}"
+
