@@ -6,7 +6,12 @@
     include_role:
       name: {{ item.name }}
     with_items:
-      - "{{ roles }}"
+      - "{{ roles-web }}"
 
 - name: Lancement du déployant mysqld
-
+  hosts: database
+  tasks:
+    include_role:
+      name: {{ item.name }}
+    with_items:
+      - "{{ roles-db }}"
