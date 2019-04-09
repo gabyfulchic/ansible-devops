@@ -8,9 +8,17 @@
       - mysql-server
       #- mysql
 
+- name: configure MySQL
+  copy:
+    src: {{ mysqld_src_path }}
+    dest: {{ mysqld_dest_path }}
+    owner: root
+    group: root
+    mode: 0644
+
 #- name: copy my.cnf
   #copy:
-    #src: /home/gabyf/ansible-devops/roles/mysql/files/my.cnf
+    #src: /home/gabyf/ansible-devops/roles/mysqld/files/my.cnf
     #dest: /etc/my.cnf
     #owner: root
     #mode: 0600
