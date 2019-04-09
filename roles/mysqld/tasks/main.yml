@@ -18,4 +18,5 @@
 - name: start MySQL
   notify:
     - start mysql
+    - create wpdb
     #- restart mysql

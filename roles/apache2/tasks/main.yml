@@ -6,11 +6,16 @@
     state: present
     update_cache: yes
     # upgrade: yes
+ 
+- name: create path to expose with apache2
+  file:
+    path: {{ dev_web_path }}
+    state: directory
 
 - name: copy apache pre-configured files
   copy:
     src: /home/gabyf/ansible-devops/roles/apache/files/monsite.conf
-    dest: /etc/apache2/sites-available/monsite.conf
+    dest: {{ site_apache_vhost }}
     owner: root
     group: root
     mode: 0644

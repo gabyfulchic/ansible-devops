@@ -1,0 +1,10 @@
+---
+
+wp_version: 5.1.1
+wp_db_name: 'wpdb'
+wp_db_user: ''
+wp_db_passord: ''
+wp_dir: '/usr/share/monsite'
+wp_db_host: ''
+wp_db_charset: 'utf-8'
+

@@ -9,3 +9,7 @@
     name: mysqld
     state: restarted
 
+- name: create wpdb
+  mysql_db:
+    name: wpdb
+    state: present

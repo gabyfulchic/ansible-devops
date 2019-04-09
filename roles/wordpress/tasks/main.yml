@@ -1,0 +1,28 @@
+---
+
+- name: download wordpress
+  get_url:
+    url: https://wordpress.org/wordpress-{{ wp_version }}.tar.gz
+    dest: /tmp/wordpress-{{ wp_version }}.tar.gz
+
+- name: extract wordpress
+  unarchive:
+    src: /tmp/wordpress-{{ wp_version }}.tar.gz
+    dest: {{ wp_dir }}
+    copy: no
+
+- name: ownership wordpress
+  file:
+    path: {{ wp_dir }}
+    owner: www-data
+    group: www-data
+    mode: 0755
+    state: directory
+    recurse: yes
+
+- name: configure wordpress config (wp-config)
+
+
+#- name: ownership for wp-content especially
+  #file:
+    #path: {{ wp_dir }}/wp-content/
