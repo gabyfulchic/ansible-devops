@@ -1,0 +1,7 @@
+---
+
+[webserver]
+webserver ansible_host=40.89.156.72
+
+[database]
+database ansible_host=20.188.34.171

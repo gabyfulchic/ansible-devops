@@ -1,3 +1,5 @@
-- name: mysqld
+---
+
+- name: wordpress
 - name: vsftpd
 - name: apache2
