@@ -2,3 +2,4 @@
 
 mysqld_src_path: '/home/gabyf/ansible-devops/roles/mysqld/files/mysqld.cnf'
 mysqld_dest_path: '/etc/mysql/mysql.conf.d/mysqld.conf'
+binded_address: 10.0.0.6

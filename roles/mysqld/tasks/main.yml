@@ -7,6 +7,8 @@
     with_items:
       - mysql-server
       #- mysql
+    notify:
+      - start mysql
 
 - name: configure MySQL
   copy:
@@ -16,15 +18,11 @@
     group: root
     mode: 0644
 
-#- name: copy my.cnf
-  #copy:
-    #src: /home/gabyf/ansible-devops/roles/mysqld/files/my.cnf
-    #dest: /etc/my.cnf
-    #owner: root
-    #mode: 0600
+- name: set bind-address MySQL
+  command: 'sed -i "s/.*bind-address.*/bind-address = {{ binded_address  }}/" /etc/mysql/mysql.conf.d/mysqld.cnf'
 
-- name: start MySQL
+- name: create wordpress db and restart MySQL
   notify:
-    - start mysql
     - create wpdb
-    #- restart mysql
+    - restart mysql
+    
