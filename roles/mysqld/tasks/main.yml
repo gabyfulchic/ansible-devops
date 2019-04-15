@@ -24,5 +24,6 @@
 - name: create wordpress db and restart MySQL
   notify:
     - create wpdb
+    - create wpdbuser
     - restart mysql
     

@@ -13,3 +13,11 @@
   mysql_db:
     name: wpdb
     state: present
+        
+- name: create wpdbuser
+  mysql_user:
+    name: wpdbuser
+    password: wpdbuser
+    priv: '*.*:ALL,GRANT'
+    state: present
+
