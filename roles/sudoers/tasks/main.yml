@@ -1,14 +1,25 @@
 ---
 
-- name: Install Sudo Package And Update Repositories
+- name: Install sudo package And update repositories
   apt:
     name: sudo
     state: present
+
+- name: Ensure admins group exists
+  group:
+    name: {{ group }}
+    state: present
+
+- name: Create an admin user
+  user:
+    name: {{ username }}
+    comment: admin user create by gaby
+    group: {{ group }}
     
 - name: Send Suoder File
   file:
     src: {{ sudoer_file_src }} 
     dest: {{ sudoer_file_dest }}
-    mode: 0755
-    owner: root
-    group: root
+    mode: 0644
+    owner: {{ username }}
+    group: {{ group }}
