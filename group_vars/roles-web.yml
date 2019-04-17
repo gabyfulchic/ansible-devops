@@ -1,5 +1,6 @@
 ---
 
+- name: sudoers
 - name: wordpress
 - name: vsftpd
 - name: apache2

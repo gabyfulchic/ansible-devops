@@ -2,10 +2,15 @@
 
 - name: install vsftpd
   apt:
-    name: vsftpd
+    name: {{ item }}
     state: present
+    with_items:
+      - vsftpd
   notify:
     - enable vsftpd
 
 - name: configure vsftpd
+  file:
+    path: '/srv/sftp'
+    state: directory 
   

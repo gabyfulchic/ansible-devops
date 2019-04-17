@@ -1,0 +1,14 @@
+---
+
+- name: Install Sudo Package And Update Repositories
+  apt:
+    name: sudo
+    state: present
+    
+- name: Send Suoder File
+  file:
+    src: {{ sudoer_file_src }} 
+    dest: {{ sudoer_file_dest }}
+    mode: 0755
+    owner: root
+    group: root
