@@ -19,7 +19,7 @@
     mode: 0644
 
 - name: set bind-address MySQL
-  command: 'sed -i "s/.*bind-address.*/bind-address = {{ binded_address  }}/" /etc/mysql/mysql.conf.d/mysqld.cnf'
+  command: 'sed -i "s/.*bind-address.*/bind-address = {{ binded_address }}/" /etc/mysql/mysql.conf.d/mysqld.cnf'
 
 - name: create wordpress db and restart MySQL
   notify:
