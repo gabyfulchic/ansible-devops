@@ -2,6 +2,11 @@
 ```ruby 
 Plays déployant une stack web telle que la suivante : FTP / Apache2 / PHP / MySQL avec des rôles ansible. Puis deploiement d'un wordpress sur ce même environnement avec un autre plays ansible.
 ```
+## launching the playbook
+
+> git clone -b dev https://github.com/gabyfulchic/ansible-devops.git  
+> cd ansible-devops  
+> ansible-playbook -i clients.ini setup-all.yml  
 
 ## Still in developpement...
 ```
