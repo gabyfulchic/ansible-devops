@@ -6,7 +6,7 @@ Plays déployant une stack web telle que la suivante : FTP / Apache2 / PHP / MyS
 
 > git clone -b dev https://github.com/gabyfulchic/ansible-devops.git  
 > cd ansible-devops  
-> ansible-playbook -i clients.ini setup-all.yml  
+> ansible-playbook -i clients.ini plays/setup-all.yml 
 
 ## Still in developpement...
 ```
