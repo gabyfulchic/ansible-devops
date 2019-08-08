@@ -1,7 +1,4 @@
----
-
 username: gabyf
 group: admins
 sudoer_file_src: /home/gaby/ansible-devops/roles/vsftpd/files/admins 
 sudoer_file_dest: /etc/sudoers.d/admins
-
