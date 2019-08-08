@@ -1,4 +1,2 @@
----
-
 dev_web_path: '/usr/share/monsite'
 site_apache_vhost: '/etc/apache2/sites-available/monsite.conf'
